@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Swedish Universities</title>
+
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.1/css/bootstrap.min.css" type="text/css">
+
+</head>
+<body>
+
+<div>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Name</th>
+            <th>Domains</th>
+            <th>Webpages</th>
+        </tr>
+
+
+        <tr th:each="university : ${universities}">
+            <td th:text="${university.country}"></td>
+            <td th:text="${university.name}"></td>
+            <td th:text="${university.domains}"></td>
+            <td th:text="${university.webPages}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
