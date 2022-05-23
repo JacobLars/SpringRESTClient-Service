@@ -11,21 +11,30 @@
 <body>
 
 <div>
-    <table>
+    <table class="table table-bordered">
+        <thead class="table-responsive">
         <tr>
             <th>Country</th>
             <th>Name</th>
             <th>Domains</th>
             <th>Webpages</th>
         </tr>
+        </thead>
 
 
-        <tr th:each="university : ${universities}">
+        <tbody class="table-light">
+        <th:block th:each="university : ${universities}">
+
+        <tr>
             <td th:text="${university.country}"></td>
             <td th:text="${university.name}"></td>
             <td th:text="${university.domains}"></td>
             <td th:text="${university.webPages}"></td>
         </tr>
+
+        </th:block>
+
+        </tbody>
     </table>
 </div>
 
